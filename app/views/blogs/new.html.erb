@@ -1,0 +1,23 @@
+<div class="contents row">
+  <a href="/">一覧に戻る</a>
+  <%= form_for @article,:url => {:action => :create}, id="new_article" do |f| %>
+    <h3>投稿する</h3>
+
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title, id: :article_name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :image %>
+      <%= f.text_field :image, id: :article_image %>
+
+    <div class="field" placeholder="記事を書いてください。">
+      <%= f.label :content %>
+      <%= f.text_area :content, id: :article_content %>
+    </div>
+    <div class="actions">
+      <%= f.submit "投稿する"%>
+    </div>
+  <% end %>
+</div>
